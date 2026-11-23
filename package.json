@@ -1,7 +1,7 @@
 {
-    "name": "@olegpolyakov/cv",
+    "name": "@olegpolyakov/resume",
     "version": "1.0.0",
-    "description": "Oleg Poliakov's CV website",
+    "description": "Oleg Poliakov's resume website",
     "type": "module",
     "scripts": {
         "dev": "vite",
@@ -22,16 +22,7 @@
         "@types/node": "^24.9.1",
         "@types/react": "^19.2.2",
         "@types/react-dom": "^19.2.2",
-        "@typescript-eslint/eslint-plugin": "^8.46.2",
-        "@typescript-eslint/parser": "^8.46.2",
-        "@vitejs/plugin-react": "^5.1.0",
         "eslint": "^9.39.0",
-        "eslint-plugin-react": "^7.37.5",
-        "eslint-plugin-react-hooks": "^7.0.1",
-        "eslint-plugin-simple-import-sort": "^12.1.1",
-        "sass-embedded": "^1.93.2",
-        "typescript": "^5.9.3",
-        "vite": "^7.1.12",
-        "vite-plugin-svgr": "^4.5.0"
+        "typescript": "^5.9.0"
     }
 }

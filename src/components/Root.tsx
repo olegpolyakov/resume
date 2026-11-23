@@ -1,6 +1,6 @@
 import { Provider, Scrollable } from '@olegpolyakov/ui';
 
-import CV from '@/documents/CV.mdx';
+import Resume from '@/documents/resume-eng.mdx';
 
 import Summary from './Summary';
 
@@ -11,9 +11,12 @@ export default function Root() {
                 <Summary />
             </aside>
             
-            <Scrollable as="main" fade>
+            <Scrollable
+                as="main"
+                fade
+            >
                 <article>
-                    <CV />
+                    <Resume />
                 </article>
             </Scrollable>
         </Provider>
