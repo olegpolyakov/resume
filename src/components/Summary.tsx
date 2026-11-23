@@ -7,8 +7,17 @@ import TelegramIcon from '@/assets/telegram.svg';
 
 export default function Summary() {
     return (
-        <Flex className="summary" column gap="m" align="center">
-            <Flex className="about" column gap="s">
+        <Flex
+            className="summary"
+            column
+            gap="m"
+            align="center"
+        >
+            <Flex
+                className="about"
+                column
+                gap="s"
+            >
                 <Heading
                     className="name"
                     start={<Logo className="logo" />}
@@ -17,25 +26,58 @@ export default function Summary() {
                     weight="bold"
                 />
 
-                <Image className="photo" src="/photo.jpg" alt="Oleg Poliakov" />
+                <Image
+                    className="photo"
+                    src="/photo.jpg"
+                    alt="Oleg Poliakov"
+                />
 
-                <Heading content="Senior Full-Stack Engineer" size="s" />
+                <Heading
+                    content="Senior Full-Stack Engineer"
+                    size="s"
+                />
 
-                <Text content="Building products that solve real problems." size="m" />
-                <Text content="Product Engineering • System Design • AI" size="s" />
+                <Text
+                    content="Building products that solve real problems."
+                    size="m"
+                />
+
+                <Text
+                    content="Product Engineering • System Design • AI"
+                    size="s"
+                />
             </Flex>
 
             <ButtonGroup align="evenly">
-                <Button as="a" href="mailto:olegpoliakov@outlook.com" icon={{ name: 'email', filled: true }} />
-                <Button as="a" href="https://github.com/olegpolyakov" icon={<GitHubIcon />} />
-                <Button as="a" href="https://linkedin.com/in/olegpoliakov-dev" icon={<LinkedInIcon />} />
-                <Button as="a" href="https://t.me/olegpolyakov" icon={<TelegramIcon />} />
+                <Button
+                    as="a"
+                    href="mailto:olegpoliakov@outlook.com"
+                    icon={{ name: 'email', filled: true }}
+                />
+
+                <Button
+                    as="a"
+                    href="https://github.com/olegpolyakov"
+                    icon={<GitHubIcon />}
+                />
+
+                <Button
+                    as="a"
+                    href="https://linkedin.com/in/olegpoliakov-dev"
+                    icon={<LinkedInIcon />}
+                />
+
+                <Button
+                    as="a"
+                    href="https://t.me/olegpolyakov"
+                    icon={<TelegramIcon />}
+                />
             </ButtonGroup>
 
             <Button
                 content="Download CV"
                 as="a"
-                href="/olegpoliakov-cv.pdf"
+                href="https://s3.olegpoliakov.dev/5f1cc9bd-1520-4073-a1bf-f64aa1cbd929/olegpolyakov-cv.pdf"
                 target="_blank"
                 variant="tinted"
                 rel="noopener noreferrer"
