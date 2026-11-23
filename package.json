@@ -1,6 +1,6 @@
 {
     "name": "@olegpolyakov/resume",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Oleg Poliakov's resume website",
     "type": "module",
     "scripts": {
