@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from 'react-router';
 
 import Root from './components/Root';
 
-import './styles.scss';
+import './index.scss';
 
 createRoot(document.getElementById('root')!).render(
     <Router>

@@ -4,6 +4,8 @@ import GitHubIcon from '@/assets/github.svg';
 import LinkedInIcon from '@/assets/linkedin.svg';
 import TelegramIcon from '@/assets/telegram.svg';
 
+const PORTFOLIO_URL = 'https://olegpoliakov.dev';
+
 export default function Summary() {
     return (
         <Flex
@@ -30,6 +32,7 @@ export default function Summary() {
                 />
 
                 <Heading
+                    as="h2"
                     content="Senior Full-Stack Engineer"
                     size="s"
                 />
@@ -43,19 +46,43 @@ export default function Summary() {
                     content="Product Engineering • System Design • AI"
                     size="s"
                 />
+
+                <Text
+                    className="print-only"
+                    content="olegpoliakov@outlook.com • olegpoliakov.dev • github.com/olegpolyakov • linkedin.com/in/olegpoliakov-dev"
+                    size="s"
+                />
             </Flex>
 
-            <Button
-                content="Download CV"
-                as="a"
-                href="https://s3.olegpoliakov.dev/5f1cc9bd-1520-4073-a1bf-f64aa1cbd929/olegpolyakov-cv.pdf"
-                target="_blank"
-                variant="tinted"
-                rel="noopener noreferrer"
-                download
-            />
-                
-            <ButtonGroup align="evenly">
+            <ButtonGroup
+                className="actions"
+                gap="s"
+                fluid
+            >
+                <Button
+                    content="Download PDF"
+                    as="a"
+                    href="https://s3.olegpoliakov.dev/5f1cc9bd-1520-4073-a1bf-f64aa1cbd929/olegpolyakov-cv.pdf"
+                    target="_blank"
+                    variant="tinted"
+                    rel="noopener noreferrer"
+                    endIcon="download"
+                    download
+                />
+
+                <Button
+                    content="Portfolio"
+                    as="a"
+                    href={PORTFOLIO_URL}
+                    endIcon="arrow_outward"
+                    variant="tinted"
+                />
+            </ButtonGroup>
+
+            <ButtonGroup
+                className="actions"
+                align="evenly"
+            >
                 <Button
                     as="a"
                     href="mailto:olegpoliakov@outlook.com"

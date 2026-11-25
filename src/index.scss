@@ -1,0 +1,150 @@
+@use 'pkg:@olegpolyakov/ui';
+@use 'pkg:@olegpolyakov/ui/styles';
+@use 'pkg:@olegpolyakov/ui/styles/media';
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: styles.var(background-color);
+    color: styles.var(foreground-color);
+}
+
+.root {
+    @include media.from(m) {
+        display: grid;
+        grid-template-columns: 3fr 5fr;
+        height: 100vh;
+    }
+}
+
+aside,
+main {
+    padding: var(--ui-space-l);
+}
+
+aside {
+    @include media.from(m) {
+        position: sticky;
+        top: 0;
+        max-width: 320px;
+        justify-self: end;
+        padding-right: var(--ui-space-m);
+    }
+}
+
+main {
+    @include media.from(m) {
+        max-height: 100vh;
+        padding-left: var(--ui-space-m);
+    }
+}
+
+article {
+    max-width: 720px;
+    line-height: 1.5;
+
+    h2 {
+        margin-top: 0;
+    }
+
+    p img {
+        vertical-align: middle;
+    }
+}
+
+.logo {
+    width: 32px;
+    height: 32px;
+}
+
+.name {
+    white-space: nowrap;
+}
+
+.photo {
+    width: 100%;
+    max-width: 360px;
+}
+
+.about {
+    @include media.to(m) {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.actions {
+    a {
+        color: inherit;
+    }
+}
+
+.print-only {
+    display: none;
+}
+
+@media print {
+    @page {
+        margin: 16mm;
+    }
+
+    body,
+    .root {
+        background: #fff;
+        color: #000;
+    }
+
+    .root {
+        display: block;
+        height: auto;
+    }
+
+    aside,
+    main {
+        position: static;
+        max-width: none;
+        max-height: none;
+        padding: 0;
+    }
+
+    main {
+        overflow: visible;
+        mask-image: none;
+    }
+
+    .wordmark,
+    .actions {
+        display: none;
+    }
+
+    .about {
+        margin-bottom: var(--ui-space-l);
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .photo {
+        width: 96px;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    article {
+        max-width: none;
+
+        a {
+            color: inherit;
+        }
+
+        h2,
+        h3 {
+            break-after: avoid;
+        }
+
+        li {
+            break-inside: avoid;
+        }
+    }
+}
